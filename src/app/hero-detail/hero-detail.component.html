@@ -1,0 +1,19 @@
+<h3>Hero details :</h3>
+<div *ngIf="hero">
+  <h4>{{ hero.id }}</h4>
+  <div>
+  <label for="hero-name">Hero name: </label>
+  <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+</div>
+
+<div>
+  <button type="button" (click)="save()"> save </button>
+</div>
+
+<button type="button" class="delete" (click)="deleteHero()">
+Delete hero
+</button>
+
+<div>
+  <button type="button" (click)="goBack()">Go Back to Heroes</button>
+</div>

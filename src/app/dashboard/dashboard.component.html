@@ -1,0 +1,21 @@
+<h2>Top Heroes</h2>
+<app-hero-search></app-hero-search>
+
+<div>
+  <label for="new-hero">Hero name :</label>
+  <input id="new-hero" #heroName />
+
+  <button
+    type="button"
+    class="add-button"
+    (click)="add(heroName.value); heroName.value = ''"
+  >
+    Add hero
+  </button>
+</div>
+
+<div class="heroes-menu">
+  <a *ngFor="let hero of heroes" routerLink="/detail/{{ hero.id }}">
+    {{ hero.name }}
+  </a>
+</div>
